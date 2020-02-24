@@ -1,7 +1,5 @@
 FROM ubuntu:20.04
 
-# maildrop problem: https://bugs.launchpad.net/ubuntu/+source/maildrop/+bug/1813467
-# Workaround: https://askubuntu.com/questions/482928/ignore-apt-get-postinstall-scripts-automatically
 RUN groupadd -g 801 syslog \
  && useradd -u 801 -g 801 -G adm -d /home/syslog -s /bin/false syslog \
  && groupadd -g 802 amavis \
