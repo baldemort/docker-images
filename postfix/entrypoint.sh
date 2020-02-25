@@ -7,9 +7,8 @@ mkdir -p \
     /run/courier/authdaemon \
     /var/spool/postfix/public \
     /var/spool/postfix/maildrop
-chown postfix:postdrop \
-    /var/spool/postfix/public \
-    /var/spool/postfix/maildrop
+chown postfix:postdrop /var/spool/postfix/public
+chown vmail:postdrop /var/spool/postfix/maildrop
 
 # Launch courier daemon and postfix
 /usr/lib/courier/courier-authlib/authdaemond 2>&1 \

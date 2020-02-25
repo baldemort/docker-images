@@ -4,7 +4,7 @@ COPY entrypoint.sh /entrypoint.sh
 
 RUN echo Start to build ... \
  && groupadd -g 10001 vmail \
- && useradd -u 10001 -g 10001 -G mail vmail \
+ && useradd -u 10001 -g 10001 vmail \
  && mkdir /home/vmail \
  && chown vmail:vmail /home/vmail \
  && groupadd -g 802 postfix \
